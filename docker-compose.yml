@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  nginx:
+    image: jiramot/nginx:1.11.2
+    volumes:
+      - ./data:/mnt/data
+      - ./conf:/etc/nginx/conf.d
+    ports:
+      - 20000:80
+      - 20001:10000
